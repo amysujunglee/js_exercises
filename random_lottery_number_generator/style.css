@@ -1,12 +1,26 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 3.5rem;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 5rem;
 }
 
-.each-number {
+p {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+p>span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.each-number>span {
     margin: 0 1rem;
     padding: 1rem;
     background-color: bisque;
@@ -16,4 +30,10 @@ h1 {
     margin: 0 1rem;
     padding: 1rem;
     background-color: cornflowerblue;
+}
+
+#get-lottery-numbers-btn {
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
 }
