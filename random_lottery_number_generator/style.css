@@ -23,13 +23,13 @@ p>span {
 .each-number>span {
     margin: 0 1rem;
     padding: 1rem;
-    background-color: bisque;
+    background-color: #a2d2ff;
 }
 
 .bonus-number {
     margin: 0 1rem;
     padding: 1rem;
-    background-color: cornflowerblue;
+    background-color: #ffc8dd;
 }
 
 #get-lottery-numbers-btn {
