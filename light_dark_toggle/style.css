@@ -1,22 +1,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 3.5rem;
-    background-color: #b3bdd0;
+    margin: 3.5rem;
 }
 
 h1,
-p,
-.btn-container {
+p {
     text-align: center;
-}
-
-h1 {
     margin-bottom: 3rem;
 }
 
-p {
-    font-size: 3rem;
-    font-weight: bold;
+.btn-container {
+    text-align: center;
 }
 
 .btn {

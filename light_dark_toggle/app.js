@@ -1,24 +1,16 @@
-// set initial count
-let count = 0;
+const btns = document.querySelectorAll('.btn');
+const body = document.querySelector('body');
 
-const number = document.querySelector('#number');
-const btns = document.querySelectorAll('.btn')
-
-btns.forEach((btn) => {
+btns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        const btnClass = e.currentTarget.classList;
+        const themeStyle = e.currentTarget.classList;
 
-        if (btnClass.contains('decrease')) {
-            count--;
-            number.style.color = 'green';
-        } else if (btnClass.contains('increase')) {
-            count++;
-            number.style.color = 'red';
+        if (themeStyle.contains('dark')) {
+            body.style.backgroundColor = '#333'
+            body.style.color = '#fff';
         } else {
-            count = 0;
-            number.style.color = '#000';
+            body.style.backgroundColor = '#fff';
+            body.style.color = '#333';
         }
-
-        number.textContent = count;
     });
 });
