@@ -10,13 +10,19 @@ btns.forEach((btn) => {
 
         if (btnClass.contains('decrease')) {
             count--;
-            number.textContent = count;
         } else if (btnClass.contains('reset')) {
             count = 0;
-            number.textContent = count;
         } else if (btnClass.contains('increase')) {
             count++;
-            number.textContent = count;
         }
+
+        if (count > 0) {
+            number.style.color = 'green';
+        } else if (count < 0) {
+            number.style.color = 'red';
+        } else {
+            number.style.color = '#000'
+        }
+        number.textContent = count;
     });
 });
