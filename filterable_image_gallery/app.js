@@ -8,9 +8,13 @@ btns.forEach(btn => {
         const category = e.currentTarget.classList;
 
         if (category.contains('icecream')) {
-            console.log(chocolateImgs);
-            // chocolateImgs.classList.add('hidden');
-            // fruitsImgs.classList.add('hidden');
+            chocolateImgs.forEach(img => {
+                img.classList.add('hide');
+            });
+        } else if (category.contains('fruits')) {
+            fruitsImgs.forEach(img => {
+                img.classList.add('hide')
+            });
         }
     });
 });

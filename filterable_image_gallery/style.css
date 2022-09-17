@@ -15,3 +15,11 @@ h1, .btn-container {
 img {
     width: 200px;
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
