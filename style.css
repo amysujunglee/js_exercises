@@ -3,37 +3,23 @@ body {
     padding: 3.5rem;
 }
 
-h1 {
+h1, .btn-container {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
-p {
-    text-align: center;
-    margin: 2.5rem 0;
-}
-
-p>span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-
-.each-number>span {
-    margin: 0 1rem;
+.btn {
     padding: 1rem;
-    background-color: bisque;
 }
 
-.bonus-number {
-    margin: 0 1rem;
-    padding: 1rem;
-    background-color: cornflowerblue;
+img {
+    width: 200px;
 }
 
-#get-lottery-numbers-btn {
-    padding: 1rem;
-    display: block;
-    margin: 0 auto;
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
 }

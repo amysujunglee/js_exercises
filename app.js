@@ -1,35 +1,65 @@
-const lottery_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45];
+const btns = document.querySelectorAll('.btn');
+const icecreamImgs = document.querySelectorAll('.icecreamImg');
+const chocolateImgs = document.querySelectorAll('.chocolateImg');
+const fruitsImgs = document.querySelectorAll('.fruitsImg');
 
-const first = document.querySelector('#first');
-const second = document.querySelector('#second');
-const third = document.querySelector('#third');
-const fourth = document.querySelector('#fourth');
-const fifth = document.querySelector('#fifth');
-const sixth = document.querySelector('#sixth');
-const getBonusNumber = document.querySelector('#get-bonus-number');
+btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const category = e.currentTarget.classList;
 
-const getLotteryNumbersBtn = document.querySelector('#get-lottery-numbers-btn');
-
-function randomIndex() {
-    return Math.floor(Math.random() * lottery_number.length);
-}
-
-getLotteryNumbersBtn.addEventListener('click', () => {
-    first.textContent = lottery_number[randomIndex()];
-    second.textContent = lottery_number[randomIndex()];
-    third.textContent = lottery_number[randomIndex()];
-    fourth.textContent = lottery_number[randomIndex()];
-    fifth.textContent = lottery_number[randomIndex()];
-    sixth.textContent = lottery_number[randomIndex()];
-
-    getBonusNumber.textContent = lottery_number[randomIndex()];
+        if (category.contains('icecream')) {
+            icecreamImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+            chocolateImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+            fruitsImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+        } else if (category.contains('chocolate')) {
+            icecreamImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+            chocolateImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+            fruitsImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+        } else if (category.contains('fruits')) {
+            icecreamImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+            chocolateImgs.forEach(img => {
+                img.classList.add('hide');
+                img.classList.remove('show');
+            });
+            fruitsImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+        } else {
+            icecreamImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+            chocolateImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+            fruitsImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            });
+        }
+    });
 });
 
-first.textContent = lottery_number[randomIndex()];
-second.textContent = lottery_number[randomIndex()];
-third.textContent = lottery_number[randomIndex()];
-fourth.textContent = lottery_number[randomIndex()];
-fifth.textContent = lottery_number[randomIndex()];
-sixth.textContent = lottery_number[randomIndex()];
-
-getBonusNumber.textContent = lottery_number[randomIndex()];
