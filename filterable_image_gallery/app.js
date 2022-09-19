@@ -11,48 +11,30 @@ btns.forEach(btn => {
         const category = e.currentTarget.classList;
 
         if (category.contains('icecream')) {
-            if(allImgs.forEach( img => {
-                img.hasClass
-            });
-            // icecreamImgs.forEach(img => {
-            //     img.classList.add('show');
-            //     img.classList.remove('hide');
-            // });
-            // chocolateImgs.forEach(img => {
-            //     img.classList.add('hide');
-            //     img.classList.remove('show');
-            // });
-            // fruitsImgs.forEach(img => {
-            //     img.classList.add('hide');
-            //     img.classList.remove('show');
-            // });
+            if (allImgs.forEach(img => {
+                if (!img.classList.contains('icecreamImg')) {
+                    img.classList.add('hide');
+                }
+            }));
 
         } else if (category.contains('chocolate')) {
-            icecreamImgs.forEach(img => {
-                img.classList.add('hide');
-                img.classList.remove('show');
-            });
-            chocolateImgs.forEach(img => {
-                img.classList.add('show');
-                img.classList.remove('hide');
-            });
-            fruitsImgs.forEach(img => {
-                img.classList.add('hide');
-                img.classList.remove('show');
-            });
+            if (allImgs.forEach(img => {
+                if (!img.classList.contains('chocolateImg')) {
+                    img.classList.add('hide');
+                } else {
+                    img.classList.add('show');
+                    img.classList.remove('hide');
+                }
+            }));
         } else if (category.contains('fruits')) {
-            icecreamImgs.forEach(img => {
-                img.classList.add('hide');
-                img.classList.remove('show');
-            });
-            chocolateImgs.forEach(img => {
-                img.classList.add('hide');
-                img.classList.remove('show');
-            });
-            fruitsImgs.forEach(img => {
-                img.classList.add('show');
-                img.classList.remove('hide');
-            });
+            if (allImgs.forEach(img => {
+                if (!img.classList.contains('fruitsImg')) {
+                    img.classList.add('hide');
+                } else {
+                    img.classList.add('show');
+                    img.classList.remove('hide');
+                }
+            }));
         } else {
             icecreamImgs.forEach(img => {
                 img.classList.remove('hide', 'show');
