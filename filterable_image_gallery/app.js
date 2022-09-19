@@ -14,13 +14,17 @@ btns.forEach(btn => {
             if (allImgs.forEach(img => {
                 if (!img.classList.contains('icecreamImg')) {
                     img.classList.add('hide');
+                    img.classList.remove('show');
+                } else if (img.classList.contains('icecreamImg')) {
+                    img.classList.add('show');
+                    img.classList.remove('hide');
                 }
             }));
-
         } else if (category.contains('chocolate')) {
             if (allImgs.forEach(img => {
                 if (!img.classList.contains('chocolateImg')) {
                     img.classList.add('hide');
+                    img.classList.remove('show');
                 } else {
                     img.classList.add('show');
                     img.classList.remove('hide');
@@ -30,21 +34,17 @@ btns.forEach(btn => {
             if (allImgs.forEach(img => {
                 if (!img.classList.contains('fruitsImg')) {
                     img.classList.add('hide');
+                    img.classList.remove('show');
                 } else {
                     img.classList.add('show');
                     img.classList.remove('hide');
                 }
             }));
         } else {
-            icecreamImgs.forEach(img => {
-                img.classList.remove('hide', 'show');
-            });
-            chocolateImgs.forEach(img => {
-                img.classList.remove('hide', 'show');
-            });
-            fruitsImgs.forEach(img => {
-                img.classList.remove('hide', 'show');
-            });
+            if (allImgs.forEach(img => {
+                img.classList.add('show');
+                img.classList.remove('hide');
+            }));
         }
     });
 });
