@@ -50,5 +50,25 @@ window.addEventListener('load', () => {
 });
 
 prevBtn.addEventListener('click', () => {
-
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = persons.length - 1;
+    }
+    addText();
 });
+
+nextBtn.addEventListener('click', () => {
+    currentItem++;
+    if (currentItem > persons.length - 1) {
+        currentItem = 0;
+    }
+    addText();
+});
+
+function addText() {
+    const person = persons[currentItem];
+    img.src = person.img;
+    name.textContent = person.name;
+    job.textContent = person.job;
+    intro.textContent = person.intro;
+}
