@@ -42,11 +42,7 @@ const surpriseBtn = document.querySelector('#surprise-btn');
 let currentItem = 0;
 
 window.addEventListener('load', () => {
-    const person = persons[currentItem];
-    img.src = person.img;
-    name.textContent = person.name;
-    job.textContent = person.job;
-    intro.textContent = person.intro;
+    addText();
 });
 
 prevBtn.addEventListener('click', () => {
@@ -62,6 +58,12 @@ nextBtn.addEventListener('click', () => {
     if (currentItem > persons.length - 1) {
         currentItem = 0;
     }
+    addText();
+});
+
+surpriseBtn.addEventListener('click', () => {
+    let randomNumber = Math.floor(Math.random() * persons.length);
+    currentItem = randomNumber;
     addText();
 });
 
