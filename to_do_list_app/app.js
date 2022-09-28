@@ -16,10 +16,3 @@ addBtn.addEventListener('click', () => {
         errorMsg.textContent = '';
     }
 });
-
-resetBtn.addEventListener('click', () => {
-    const todoItems = todoList.children;
-    // for (let i = 0; i < todoItems.length; i++) {
-    //     todoItems[i].remove();
-    // }
-});
