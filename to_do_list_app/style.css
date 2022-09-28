@@ -15,3 +15,8 @@ h1 {
     width: 650px;
     background-color: #eee;
 }
+
+.error-msg {
+    margin: 1rem 0;
+    color: #ba0000;
+}
