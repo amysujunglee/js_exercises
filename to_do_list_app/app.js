@@ -2,16 +2,24 @@ const container = document.querySelector('.container')
 const addTodo = document.querySelector('#add-todo');
 const addBtn = document.querySelector('#add-btn');
 const resetBtn = document.querySelector('#reset-btn');
-const todoList = document.querySelector('.todo-list')
+const errorMsg = document.querySelector('.error-msg');
+const todoList = document.querySelector('.todo-list');
 
 // Add a new todo
 addBtn.addEventListener('click', () => {
     if (addTodo.value === '') {
-        container.append(`<p>It's empty! Please add something.</p>`);
+        errorMsg.innerHTML = `It's empty! Please add something.`;
     } else {
         todoList.innerHTML +=
             `<li class="todo-item">${addTodo.value}<button>Edit</button><button>X</button></li>`;
-
         addTodo.value = '';
+        errorMsg.textContent = '';
     }
+});
+
+resetBtn.addEventListener('click', () => {
+    const todoItems = todoList.children;
+    // for (let i = 0; i < todoItems.length; i++) {
+    //     todoItems[i].remove();
+    // }
 });
