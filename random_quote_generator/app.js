@@ -1,53 +1,43 @@
 const quotes = [
     {
-        id: 1,
-        quote: 'Quote 1',
-        author: 'Author 1'
+        quote: 'Great things never came from comfort zones.',
+        author: 'Anonymous'
     },
     {
-        id: 2,
-        quote: 'Quote 2',
-        author: 'Author 2'
+        quote: `It always seems impossible untile it's done`,
+        author: 'Nelson Mandela'
     },
     {
-        id: 3,
-        quote: 'Quote 3',
-        author: 'Author 3'
+        quote: `If people are doubting how far you can go, go so far that you can't hear them anytmore.`,
+        author: 'Michele Ruiz'
     },
     {
-        id: 4,
-        quote: 'Quote 4',
-        author: 'Author 4'
+        quote: 'It is never too late to be who you might have been.',
+        author: 'George Elliot'
     },
     {
-        id: 5,
-        quote: 'Quote 5',
-        author: 'Author 5'
+        quote: `If your dreams don't scare you, thry are too small.`,
+        author: 'Richard Branson'
     },
     {
-        id: 6,
-        quote: 'Quote 6',
-        author: 'Author 6'
+        quote: `Your time is limited, so don't waste it living someone else's life.`,
+        author: 'Steve Jobs'
     },
     {
-        id: 7,
-        quote: 'Quote 7',
-        author: 'Author 7'
+        quote: 'Continuous improvement is better than delayed perfection.',
+        author: 'Mark Twain'
     },
     {
-        id: 8,
-        quote: 'Quote 8',
-        author: 'Author 8'
+        quote: 'Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.',
+        author: 'Helen Keller'
     },
     {
-        id: 9,
-        quote: 'Quote 9',
-        author: 'Author 9'
+        quote: 'Strenth and growth come only through continuous effor and struggle.',
+        author: 'Nopoleon Hill'
     },
     {
-        id: 10,
-        quote: 'Quote 10',
-        author: 'Author 10'
+        quote: `Don't tell people your dreams. Show them.`,
+        author: 'Anonymous'
     },
 ];
 
@@ -61,8 +51,8 @@ const getRandomQuote = () => {
     let randomNum = 0;
     randomNum = Math.floor(Math.random() * quotes.length + 1);
 
-    quote.textContent = quotes[randomNum].quote;
-    author.textContent = quotes[randomNum].author;
+    quote.textContent = `"${quotes[randomNum].quote}"`;
+    author.textContent = `- ${quotes[randomNum].author} -`;
 };
 
 getRandomQuote();
