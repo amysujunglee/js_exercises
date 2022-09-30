@@ -11,11 +11,15 @@ h1,
 }
 
 .container {
-    width: 600px;
+    width: 60%;
     margin: 0 auto;
+    background-color: #ddd;
+    padding: 2rem;
 }
 
 button {
     padding: 1rem;
     margin-top: 2rem;
+    background-color: #fff;
+    border: 1px solid #555;
 }
