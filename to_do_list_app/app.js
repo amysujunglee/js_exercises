@@ -11,8 +11,17 @@ addBtn.addEventListener('click', () => {
         errorMsg.innerHTML = `It's empty! Please add something.`;
     } else {
         todoList.innerHTML +=
-            `<li class="todo-item">${addTodo.value}<button>Edit</button><button>X</button></li>`;
+            `<li class="todo-item">${addTodo.value}<button class="edit-btn">Edit</button><button class="del-btn">X</button></li>`;
         addTodo.value = '';
         errorMsg.textContent = '';
+
+        // Delete each todo
+        const delBtns = document.querySelectorAll('.del-btn');
+        delBtns.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                let currentItem = e.target;
+                currentItem.parentElement.remove();
+            });
+        });
     }
 });
