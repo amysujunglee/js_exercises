@@ -62,6 +62,12 @@ getRandomQuoteBtn.addEventListener('click', () => {
 
 // copy quote
 copyBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText('hello');
-    alert(`You copied: ${quote.textContent} ${author.textContent}`)
-})
+    navigator.clipboard
+        .writeText(`${quote.textContent} ${author.textContent}`)
+        .then(() => {
+            alert(`You copied: ${quote.textContent} ${author.textContent}`);
+        })
+        .catch(() => {
+            alert('Please try it again.')
+        });
+});
