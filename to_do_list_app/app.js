@@ -25,3 +25,9 @@ addBtn.addEventListener('click', () => {
         });
     }
 });
+
+resetBtn.addEventListener('click', () => {
+    while (todoList.hasChildNodes()) {
+        todoList.removeChild(todoList.lastChild);
+    }
+});
