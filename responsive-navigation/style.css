@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    height: 70px;
+    background-color: #eee;
+}
+
+nav {
+    display: none;
+}
+
+.mobile-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+}
+
+.mobile-icon {
+    width: 50px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
