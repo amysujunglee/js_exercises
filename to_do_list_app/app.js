@@ -5,13 +5,13 @@ const resetBtn = document.querySelector('#reset-btn');
 const errorMsg = document.querySelector('.error-msg');
 const todoList = document.querySelector('.todo-list');
 
-// Add a new todo
-addBtn.addEventListener('click', () => {
+const addTodoItem = () => {
+    // Add each todo
     if (addTodo.value === '') {
         errorMsg.innerHTML = `It's empty! Please add something.`;
     } else {
         todoList.innerHTML +=
-            `<li class="todo-item">${addTodo.value}<button class="edit-btn">Edit</button><button class="del-btn">X</button></li>`;
+            `<li class="todo-item"><span class="todo">${addTodo.value}</span><button class="done-btn">Done</button><button class="del-btn">X</button></li>`;
         addTodo.value = '';
         errorMsg.textContent = '';
 
@@ -23,6 +23,26 @@ addBtn.addEventListener('click', () => {
                 currentItem.parentElement.remove();
             });
         });
+
+        // Done each todo
+        const doneBtns = document.querySelectorAll('.done-btn');
+        doneBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let currentItem = e.target;
+                currentItem.parentElement.style.textDecoration = 'line-through';
+                currentItem.parentElement.style.color = 'green';
+            });
+        });
+    }
+};
+
+addBtn.addEventListener('click', () => {
+    addTodoItem();
+});
+
+addTodo.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        addTodoItem();
     }
 });
 
