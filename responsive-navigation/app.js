@@ -1,8 +1,15 @@
-const mobileMenu = document.querySelector('.mobile-icon');
-const nav = document.querySelector('nav');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const links = document.querySelectorAll('.nav-link');
 
-console.log(nav);
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-mobileMenu.addEventListener('click', () => {
-    nav.classList.toggle('show');
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
