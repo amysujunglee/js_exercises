@@ -1,8 +1,7 @@
-const inputNewClient = document.querySelector('#new-client');
-const newClientDate = document.querySelector('#new-client-date');
+const newTaskInput = document.querySelector('#new-task');
 const addBtn = document.querySelector('.add-btn');
 const removeAllBtn = document.querySelector('.remove-all-btn');
-const clientList = document.querySelector('.client-list');
+const taskList = document.querySelector('.task-list');
 
 // document.addEventListener('DOMContentLoaded', getClients);
 
@@ -26,25 +25,26 @@ removeAllBtn.addEventListener('click', removeAllClients)
 // }
 
 function addNewClient() {
-    if (inputNewClient.value) {
-        const clientName = inputNewClient.value;
+    if (newTaskInput.value) {
+        const taskItem = newTaskInput.value;
 
         const li = document.createElement('li');
-        li.className = 'client';
-        li.appendChild(document.createTextNode(clientName));
-        const span = document.createElement('span');
-        span.className = 'client-date-input';
-        span.appendChild(document.createTextNode(newClientDate.value));
-        li.appendChild(span);
+        li.className = 'task-item';
+        li.appendChild(document.createTextNode(taskItem));
+        const deleteLink = document.createElement('a');
+        deleteLink.className = 'delete-task';
+        deleteLink.innerHTML = '<i class="ri-close-line"></i>';
+        const doneLink = document.createElement('a');
+        doneLink.className = 'done-task';
+        doneLink.innerHTML = '<i class="ri-check-line"></i>';
+        li.appendChild(deleteLink);
+        li.appendChild(doneLink);
 
-        clientList.appendChild(li);
-        storeClientInLocalStorage(inputNewClient.value);
-
-        console.log(inputNewClient.value);
+        taskList.appendChild(li);
+        // storeTaskInLocalStorage(newTaskInput.value);
     }
-    inputNewClient.value = '';
-    newClientDate.value = '';
-    inputNewClient.focus();
+    newTaskInput.value = '';
+    newTaskInput.focus();
 };
 
 // function storeClientInLocalStorage(client) {
@@ -60,7 +60,7 @@ function addNewClient() {
 // }
 
 function removeAllClients() {
-    while (clientList.firstChild) {
-        clientList.firstChild.remove();
+    while (taskList.firstChild) {
+        taskList.firstChild.remove();
     }
 };

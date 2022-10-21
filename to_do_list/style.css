@@ -1,4 +1,7 @@
-.client-date-input {
-    margin-left: 2rem;
-    color: #079300;
+.delete-task {
+    color: red;
+}
+
+.done-task {
+    color: green;
 }
