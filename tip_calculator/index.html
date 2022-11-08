@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <form>
+        <label for="bill">Bill:</label>
+        <input type="number" name="bill" class="bill">
+        <label for="tip">Tip:</label>
+        <input type="number" name="tip" class="tip">
+        <input type="submit" value="Calculate!">
+    </form>
+
+    <!-- <div id="loading">
+        <img src="img/loading.gif" alt="">
+    </div> -->
+    <div id="results">
+        <h2>Results</h2>
+        <label for="totalTip">Tip:</label>
+        <input type="number" name="totalTip" class="total-tip" disabled>
+        <label for="total">Total:</label>
+        <input type="number" name="total" class="total" disabled>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
