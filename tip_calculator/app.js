@@ -8,10 +8,10 @@ form.addEventListener('submit', calculate);
 
 function calculate(e) {
     const total = bill.value * (tip.value / 100 + 1);
-    total = totalInput.value;
+    totalInput.value = total;
 
-
-    console.log(total);
+    const totalTip = bill.value * (tip.value / 100);
+    totalTipInput.value = totalTip;
 
     e.preventDefault();
 }

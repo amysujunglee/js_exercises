@@ -6,3 +6,22 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+form {
+    margin: 2rem 0;
+}
+
+.btn-calculate {
+    display: block;
+}

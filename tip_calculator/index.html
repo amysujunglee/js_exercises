@@ -9,25 +9,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tip Calculator</h1>
-    <form>
-        <label for="bill">Bill:</label>
-        <input type="number" name="bill" class="bill">
-        <label for="tip">Tip:</label>
-        <input type="number" name="tip" class="tip">
-        <input type="submit" value="Calculate!">
-    </form>
-
-    <!-- <div id="loading">
-        <img src="img/loading.gif" alt="">
-    </div> -->
-    <div id="results">
-        <h2>Results</h2>
-        <label for="totalTip">Tip:</label>
-        <input type="number" name="totalTip" class="total-tip" disabled>
-        <label for="total">Total:</label>
-        <input type="number" name="total" class="total" disabled>
-    </div>
+    <main>
+        <h1>Tip Calculator</h1>
+        <form>
+            <label for="bill">Bill:</label>
+            <input type="number" name="bill" class="bill">
+            <label for="tip">Tip:</label>
+            <input type="number" name="tip" class="tip">
+            <span>%</span>
+            <input type="submit" value="Calculate!" class="btn-calculate">
+        </form>
+        <!-- <div id="loading">
+            <img src="img/loading.gif" alt="">
+        </div> -->
+        <div id="results">
+            <h2>Results</h2>
+            <label for="totalTip">Tip:</label>
+            <input type="number" name="totalTip" class="total-tip" disabled>
+            <label for="total">Total:</label>
+            <input type="number" name="total" class="total" disabled>
+        </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
