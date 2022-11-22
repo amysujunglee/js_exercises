@@ -1,2 +1,2 @@
 # js_exercises
-JavaScript exercises for beginners / 2022
+JavaScript exercises for beginners
